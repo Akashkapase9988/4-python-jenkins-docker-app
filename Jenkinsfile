@@ -38,13 +38,12 @@ pipeline {
         stage('Docker Tag & Push') {
             steps {
                 dir('4-python-jenkins-docker-app') {
-                    withCredentials([usernamePassword(credentialsId: 'theshubhamgour',
-                                                      passwordVariable: 'DockerhubPassword',
-                                                      usernameVariable: 'DockerhubUserName')]) {
+                    withCredentials([usernamePassword(credentialsId: 'akashk9988', passwordVariable: 'Dockerhubpassword', usernameVariable: 'Dcokerhubuser')]) 
+ {
                         sh '''
-                            echo "$DockerhubPassword" | docker login -u "$DockerhubUserName" --password-stdin
-                            docker tag python-app:latest theshubhamgour/python-app:latest
-                            docker push theshubhamgour/python-app:latest
+                            echo "$Dockerhubpassword" | docker login -u "$Dcokerhubuser" --password-stdin
+                            docker tag python-app:latest akash/python-app:latest
+                            docker push akash/python-app:latest
                         '''
                     }
                 }
