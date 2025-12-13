@@ -38,8 +38,8 @@ pipeline {
  {
                         sh '''
                             echo "$Dockerhubpassword" | docker login -u "$Dcokerhubuser" --password-stdin
-                            docker tag python-app:latest akash/python-app:latest
-                            docker push akash/python-app:latest
+                            docker tag python-app:latest akashk9988/python-app:latest
+                            docker push akashk9988/python-app:latest
                         '''
                     }
                 
