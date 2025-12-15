@@ -16,7 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                     sh 'python3 -m unittest discover tests'
-                90909
+                
             }
         }
         stage('Docker Build') {
@@ -58,4 +58,3 @@ pipeline {
         }
     }
 }
-sysnytax
